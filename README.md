@@ -51,8 +51,8 @@ Optional but useful:
 Clone the repo and run the installer:
 
 ```bash
-git clone <repo-url> deep_web_research_mcp
-cd deep_web_research_mcp
+git clone https://github.com/rafsunsheikh/deep-web-research-mcp.git 
+cd deep-web-research-mcp
 ./scripts/install_local.sh
 ```
 
