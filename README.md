@@ -308,4 +308,4 @@ Before pushing the repo:
 
 ## License
 
-Add your preferred license before publishing the repository.
+This project is licensed under the MIT License. See `LICENSE`.
