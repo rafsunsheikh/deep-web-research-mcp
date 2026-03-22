@@ -104,7 +104,7 @@ The terminal client calls the same research service used by the MCP server.
 Basic usage:
 
 ```bash
-./.venv/bin/python deep_research_client.py "latest iran-us war"
+./.venv/bin/python deep_research_client.py "latest breakthroughs in solid-state batteries"
 ```
 
 This prints a clean text context block suitable for reading directly or pasting into a prompt.
@@ -114,7 +114,7 @@ Useful options:
 ```bash
 ./.venv/bin/python deep_research_client.py --max-results 5 "solid-state battery breakthroughs"
 ./.venv/bin/python deep_research_client.py --include-metadata "local LLM context windows"
-./.venv/bin/python deep_research_client.py --json "latest iran-us war"
+./.venv/bin/python deep_research_client.py --json "state of the art local LLM context windows"
 ```
 
 Recommended:
@@ -164,7 +164,7 @@ from server import DeepResearchService
 
 async def main():
     service = DeepResearchService()
-    response = await service.deep_research("latest iran-us war", max_results=5)
+    response = await service.deep_research("state of the art local LLM context windows", max_results=5)
     print(response.model_dump_json(indent=2))
 
 asyncio.run(main())
@@ -202,14 +202,14 @@ The simplest Ollama integration is to generate context with the terminal client 
 Example:
 
 ```bash
-CONTEXT="$(./.venv/bin/python deep_research_client.py 'latest iran-us war')"
+CONTEXT="$(./.venv/bin/python deep_research_client.py 'state of the art local LLM context windows')"
 
 ollama run llama3.1 "$(cat <<EOF
 Use the research context below to answer the question.
 
 $CONTEXT
 
-Question: What are the latest major developments in the Iran-US war?
+Question: What is the current state of the art for local LLM context windows?
 EOF
 )"
 ```
@@ -217,7 +217,7 @@ EOF
 If a wrapper script or agent needs structured output, use:
 
 ```bash
-./.venv/bin/python deep_research_client.py --json "latest iran-us war"
+./.venv/bin/python deep_research_client.py --json "state of the art local LLM context windows"
 ```
 
 ## Output Quality Notes
